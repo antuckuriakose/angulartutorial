@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="div_contact">
+      <p style="color:#009688;">{{ message }}</p>
+
+    </div>
+    <div id="container">
+	    <div id="row">
+		    <div id="col-md-6">
+            
+	            <div class="panel panel-default">
+				  <div class="panel-body">
+				  	<form name="myform" ng-click="submitform()" >
+		                  <p>
+							<p>Name *:</p>
+							<input type="text" name="name" ng-model="name" required/>	
+							<span ng-show="(myform.name.$dirty || submitted) && myform.name.$error.required">
+							  <p style="color:red;">The name is required</p>
+							</span>
+						 </p>
+
+					     <p>
+							<p>Email-id*:</p>
+							<input type="email" name="email" ng-model="email" required/>
+							<span ng-show="(myform.email.$dirty || submitted) && myform.email.$error.required">
+							<p style="color:red;">Invalid email address.</p></span>
+						 </p>
+
+						 <p>
+							<p>Company:</p>
+							   <input type="text" name="company" ng-model="company" />	
+							
+						 </p>
+
+						 <p>
+							<p>How did you know about us?</p>
+							<select ng-model="selectop">
+							  <option value="Google">Google</option>
+							  <option value="facebook">facebook</option>
+							  <option value="Newpaper">Newpaper</option>
+							  <option value="Others">Others</option>
+							</select>
+						 </p>
+						 <p>
+							<p>Message*:</p>
+								<input type="text" name="msg" ng-model="msg" required/>	
+								<span ng-show="(myform.msg.$dirty || submitted) && myform.msg.$error.required">
+								<p style="color:red;">Please write any messsage.</p>
+								</span>	
+						 </p>
+		                 <p>
+							<input type="submit"/>
+						</p>       
+				    </form>
+                  </div>
+                </div>
+              </div>
+				
+		    </div>
+		<div id="col-md-6">
+		<div id="map_div" ng-init="initialize()"></div>
+			
+		</div>
+
+	    </div>
+    </div>
+</body>
+</html>

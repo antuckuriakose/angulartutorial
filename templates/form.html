@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="panel panel-default">
+	<div class="panel-heading">form validation</div>
+	<div class="panel-body">
+	<form name="myform" >
+		<p>Username:
+		  <input name="name" ng-model="name" required/>	
+		  <span ng-show="myform.name.$touched && myform.name.$invalid">The name is required</span>
+		 </p>
+		 <p>Password:
+
+		   <input name="pwd" ng-model="pwd" type="password" required/>	
+		  <span ng-show="myform.pwd.$touched && myform.pwd.$invalid">The password is required</span>
+		 </p>
+		 <p>confirm password:
+		 <input name="confirmpwd" ng-model="confirmpwd" type="password" required data-password-verify="pwd"/>	
+		  <span ng-show="myform.confirmpwd.$touched && myform.confirmpwd.$invalid">please rewrite the password</span>
+		 </p>
+		
+		
+			<p>Email-id:<input type="email" name="email" ng-model="email" required/>
+		<span ng-show="myform.email.$error.required">Email is required.</span></p>
+		<span ng-show="myform.email.$error.email">Invalid email address.</span>
+		<p>
+		<input type="submit" ng-disabled="myform.name.$dirty && myform.name.$invalid ||myform.pwd.$dirty && myform.pwd.$invalid||myform.confirmpwd.$dirty && myform.confirmpwd.$invalid ||myform.email.$dirty && myform.email.$invalid">
+		</p>
+		
+		</form>
+		
+		<!--<h6>{{myform.name.$valid}}</h6>
+		
+		<h6>{{myform.phno.$valid}}</h6>
+		<h6>{{myform.email.$valid}}</h6>-->
+
+
+	</div>
+</div>
+
+
+</body>
+</html>
+

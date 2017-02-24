@@ -17,8 +17,6 @@
   },
   "homepage": "https://github.com/antuckuriakose/angulartutorial#readme",
   "dependencies": {
-    "angular": "^1.6.2",
-    "angular-route": "^1.6.2",
-    "bootstrap": "^3.3.7"
+   
   }
 }
