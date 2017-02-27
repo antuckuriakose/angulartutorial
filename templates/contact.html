@@ -16,7 +16,7 @@
 				  <div class="panel-body">
 				  	<form name="myform" ng-click="submitform()" >
 		                  <p>
-							<p>Name *:</p>
+							<p id="p_id">Name *:</p>
 							<input type="text" name="name" ng-model="name" required/>	
 							<span ng-show="(myform.name.$dirty || submitted) && myform.name.$error.required">
 							  <p style="color:red;">The name is required</p>
@@ -24,20 +24,20 @@
 						 </p>
 
 					     <p>
-							<p>Email-id*:</p>
+							<p id="p_id">Email-id*:</p>
 							<input type="email" name="email" ng-model="email" required/>
 							<span ng-show="(myform.email.$dirty || submitted) && myform.email.$error.required">
 							<p style="color:red;">Invalid email address.</p></span>
 						 </p>
 
 						 <p>
-							<p>Company:</p>
+							<p id="p_id">Company:</p>
 							   <input type="text" name="company" ng-model="company" />	
 							
 						 </p>
 
 						 <p>
-							<p>How did you know about us?</p>
+							<p id="p_id">How did you know about us?</p>
 							<select ng-model="selectop">
 							  <option value="Google">Google</option>
 							  <option value="facebook">facebook</option>
@@ -46,7 +46,7 @@
 							</select>
 						 </p>
 						 <p>
-							<p>Message*:</p>
+							<p id="p_id">Message*:</p>
 								<input type="text" name="msg" ng-model="msg" required/>	
 								<span ng-show="(myform.msg.$dirty || submitted) && myform.msg.$error.required">
 								<p style="color:red;">Please write any messsage.</p>

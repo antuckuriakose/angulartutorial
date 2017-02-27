@@ -51,6 +51,7 @@
         $scope.selectop = '';
         $scope.submitform = function(){
            $scope.submitted =true;
+           
         };
         $scope.initialize = function() {
           var map = new google.maps.Map(document.getElementById('map_div'), {
